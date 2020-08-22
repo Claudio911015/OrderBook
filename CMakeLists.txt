@@ -8,7 +8,9 @@ enable_testing()
 include_directories(src)
 add_executable(OrderBook src/main.cpp 
                          src/OrderBook.cpp
-                         src/OrderBook.h)
+                         src/OrderBook.h
+                         src/order.h
+                         src/order.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
