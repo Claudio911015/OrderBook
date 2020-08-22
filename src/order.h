@@ -2,19 +2,24 @@
 #define ORDER_H
 
 #include <iostream>
+#include <memory>
 
 class order
 {
 private:
+
     int price;
+
     int amount;
+
     double time;
+
 public:
     order();
     
     virtual void execute(){};
 
-    virtual bool operator <(order& order2){return true;};
+    bool operator <(std::shared_ptr<order> order2);
 
 };
 
