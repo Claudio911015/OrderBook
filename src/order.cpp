@@ -1,6 +1,9 @@
 #include <order.h>
 
-order::order()
+order::order(int price_, int amount_, int time_):
+                                                price(price_),
+                                                amount(amount_),
+                                                time(time_)
 {
 
     std::cout<<"I am an order \n";

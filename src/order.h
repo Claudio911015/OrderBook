@@ -15,7 +15,7 @@ private:
     double time;
 
 public:
-    order();
+    order(int price_, int amount_, int time_);
     
     virtual void execute(){};
 
