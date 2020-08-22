@@ -1,16 +1,6 @@
 #include <OrderBook.h>
 
-
-OrderBook::OrderBook(int n)
+OrderBook::OrderBook()
 {
-
-    bid = n;
-
-    std::cout<<"OrderBook xxcreated"<<std::endl;
+    std::cout<<"OrhderBook xxcreated"<<std::endl;
 }
-
-int OrderBook::add(int a, int b)
-{
-    return a+b;
-}
-

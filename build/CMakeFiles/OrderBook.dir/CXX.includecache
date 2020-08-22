@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/OrderBook.h
+vector
+-
+iostream
+-
+order.h
+-
+memory
+-
+
+../src/order.h
+iostream
+-
+
+/home/claudio/Git/OrderBook/src/OrderBook.cpp
+OrderBook.h
+-
+
+/home/claudio/Git/OrderBook/src/main.cpp
+iostream
+-
+OrderBook.h
+-
+order.h
+-
+

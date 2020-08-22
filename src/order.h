@@ -1,10 +1,19 @@
+#ifndef ORDER_H
+#define ORDER_H
+
 #include <iostream>
 
 class order
 {
 private:
-    /* data */
+    int price;
+    int amount;
 public:
-    order(int n);
+    order();
     
+    virtual void execute(){};
+
 };
+
+
+#endif

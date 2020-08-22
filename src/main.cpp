@@ -2,15 +2,14 @@
 #include <OrderBook.h>
 #include <order.h>
 
-#include <memory>
+
 
 int main() {
 
-    std::shared_ptr<order> nn(new order(5));
+    std::shared_ptr<order> nn(new order());
 
-    order o(5);
-    OrderBook bx(3);
-    std::cout<<"Hola \n";
+    std::shared_ptr<OrderBook> bx(new OrderBook());
+
     return 0;
 
 

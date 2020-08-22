@@ -1,14 +1,16 @@
 #include <vector>
 #include <iostream>
+#include <order.h>
 
-class OrderBook{
-    public:
+#include <memory>
 
-        int bid;
-
-        OrderBook(int n);
-
-        int add(int a, int b);
-
+class OrderBook
+{
+private:
+    std::vector<std::shared_ptr<order>> ord;
+public:
+    OrderBook(/* args */);
+    
 };
+
 

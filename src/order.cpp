@@ -1,6 +1,6 @@
 #include <order.h>
 
-order::order(int n)
+order::order()
 {
 
     std::cout<<"I am an order \n";
