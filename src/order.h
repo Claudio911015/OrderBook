@@ -8,14 +8,17 @@ class order
 {
 private:
 
-    int price;
-
     int amount;
 
     double time;
 
 public:
-    order(int price_, int amount_, int time_);
+
+    int price;
+
+    bool bid;
+    
+    order(int price_, int amount_, int time_, bool bid_);
     
     virtual void execute(){};
 

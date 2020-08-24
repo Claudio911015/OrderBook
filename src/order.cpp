@@ -1,9 +1,10 @@
 #include <order.h>
 
-order::order(int price_, int amount_, int time_):
+order::order(int price_, int amount_, int time_, bool bid_):
                                                 price(price_),
                                                 amount(amount_),
-                                                time(time_)
+                                                time(time_),
+                                                bid(bid_)
 {
 
     std::cout<<"I am an order \n";
