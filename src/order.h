@@ -21,6 +21,7 @@ public:
     
     virtual void execute(){};
 
+    bool operator < (std::shared_ptr<order> order2) const;
     
 
 };

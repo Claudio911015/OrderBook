@@ -25,6 +25,7 @@ void OrderBook::updateOrderBook(std::shared_ptr<order> new_order)
 
 void OrderBook::insertElementSorted(std::vector<std::shared_ptr<order>>& ord, std::shared_ptr<order> new_order)
 {
+    bool inserted = false;
 
     if(ord.size() == 0){
 
@@ -35,12 +36,12 @@ void OrderBook::insertElementSorted(std::vector<std::shared_ptr<order>>& ord, st
 
     for(std::vector<std::shared_ptr<order>>::iterator i = ord.begin(); i != ord.end(); i++)
     {
-        
-        if(new_order > *i)
+
+        if(new_order->price < (*i)->price)
         {
-            ord.insert(i + 1,new_order);
+            ord.insert(i,new_order);
             inserted = true; 
-            break;
+            break; 
         }
 
     }

@@ -14,8 +14,6 @@ private:
 
     const int MAX_ORDERS = 10000000;
 
-    bool inserted = false;
-
 public:
 
     OrderBook(/* args */);

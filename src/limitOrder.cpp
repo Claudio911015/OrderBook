@@ -11,8 +11,5 @@ limitOrder::limitOrder(int price_, int amount_, int time_, bool bid_)
 }
 
 
-bool limitOrder::operator<(std::shared_ptr<limitOrder> order2)
-{
-    return((order2->price < limitOrder::price) & (order2->time < limitOrder::time));
-}
+
 
