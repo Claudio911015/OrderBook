@@ -22,7 +22,7 @@ public:
     
     void updateOrderBook(std::shared_ptr<order> new_order);
 
-    void insertElementSorted(std::vector<std::shared_ptr<order>> ord, std::shared_ptr<order> new_order);
+    void insertElementSorted(std::vector<std::shared_ptr<order>>& ord, std::shared_ptr<order> new_order);
 
     
 

@@ -6,23 +6,22 @@
 
 class order
 {
-private:
+
+public:
 
     int amount;
 
     double time;
 
-public:
-
     int price;
 
     bool bid;
     
-    order(int price_, int amount_, int time_, bool bid_);
+    order();
     
     virtual void execute(){};
 
-    bool operator <(std::shared_ptr<order> order2);
+    
 
 };
 

@@ -10,6 +10,6 @@ public:
 
     bool bid;
 
-    marketOrder(int price_, int amount_, int time_, bool bid_);
+    marketOrder(int amount_, bool bid_);
     
 };

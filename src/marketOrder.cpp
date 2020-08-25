@@ -1,6 +1,6 @@
 #include <marketOrder.h>
 
-marketOrder::marketOrder(int price_, int amount_, int time_, bool bid_) : order(price_, amount_, time_, bid_)                                             
+marketOrder::marketOrder(int amount_, bool bid_)                                           
 {
     amount = amount_;
 

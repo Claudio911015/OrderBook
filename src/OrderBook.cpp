@@ -4,6 +4,8 @@ OrderBook::OrderBook()
 {
     ord_bid.reserve(MAX_ORDERS);
 
+    ord_ask.reserve(MAX_ORDERS);
+
     std::cout<<"OrhderBook xxcreated"<<std::endl;
 }
 
@@ -21,21 +23,22 @@ void OrderBook::updateOrderBook(std::shared_ptr<order> new_order)
 }
 
 
-void OrderBook::insertElementSorted(std::vector<std::shared_ptr<order>> ord, std::shared_ptr<order> new_order)
+void OrderBook::insertElementSorted(std::vector<std::shared_ptr<order>>& ord, std::shared_ptr<order> new_order)
 {
-    if(ord_bid.size() == 0){
 
-        ord_bid.push_back(new_order);
+    if(ord.size() == 0){
+
+        ord.push_back(new_order);
         inserted = true; 
 
     }
 
-    for(std::vector<std::shared_ptr<order>>::iterator i = ord_bid.begin(); i != ord_bid.end(); i++)
+    for(std::vector<std::shared_ptr<order>>::iterator i = ord.begin(); i != ord.end(); i++)
     {
         
         if(new_order > *i)
         {
-            ord_bid.insert(i + 1,new_order);
+            ord.insert(i + 1,new_order);
             inserted = true; 
             break;
         }
@@ -44,12 +47,12 @@ void OrderBook::insertElementSorted(std::vector<std::shared_ptr<order>> ord, std
 
     if(! inserted)
     {
-        ord_bid.push_back(new_order);
+        ord.push_back(new_order);
     }
 
-    for(int i=0; i < ord_bid.size(); i++)
+    for(int i=0; i < ord.size(); i++)
     {
-        std::cout<<ord_bid[i]->price<<" ";
+        std::cout<<ord[i]->price<<" ";
     }
     std::cout<<"\n";
 }
